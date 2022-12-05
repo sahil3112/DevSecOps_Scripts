@@ -1,3 +1,21 @@
+"""
+Example: python3.10 zap.py -zap http://localhost:8090 -key <ZAP_API_KEY> -t http://10.10.10.2:3000 -sn "Juice Shop" -se Graal.js -sp /home/zap/Juice_Shop.js -cp /home/zap/Juice_Shop.context -pool_time 5 -tsp /home/appsecworld/spider_scan_result.txt -asp /home/appsecworld/ajax_spider_scan_result.txt -title test
+HELP:
+
+-zap --zap_url OWASP ZAP API URL e.g http://localhost:8090
+-key --zap_api_key OWASP ZAP API Key
+-t --target_url Target URL
+-sn --script_name Session Management Script Name
+-se --script_engine Session Management Script Engine (Graal.js, Oracle Nashorn or Mozilla Zest)
+-sp --script_path Session Management Script Path (As per ZAP Container)
+-cp --context_path Context Path (As per ZAP Container)
+-pool_time --pool_time Time interval to get latest scan status (in second)", type=int)
+-tsp --spider_scan_result_path Path to Save Tradition Spider Result
+-asp --ajax_spider_scan_result_path Path to Save AJAX Spider Result
+-title --title Report Title
+
+"""
+
 import argparse
 import requests
 import json
@@ -5,7 +23,6 @@ import time
 
 parser = argparse.ArgumentParser()
 
-#-db DATABSE -u USERNAME -p PASSWORD -size 20
 parser.add_argument("-zap", "--zap_url", help="OWASP ZAP API URL e.g http://localhost:8090")
 parser.add_argument("-key", "--zap_api_key", help="OWASP ZAP API Key")
 parser.add_argument("-t", "--target_url", help="Target URL")
