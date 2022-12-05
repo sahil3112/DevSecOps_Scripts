@@ -14,6 +14,22 @@ HELP:
 -asp --ajax_spider_scan_result_path Path to Save AJAX Spider Result
 -title --title Report Title
 
+Check ZAP API Service is Live or Not
+Load Session Management Script 
+Import Context
+View Session Management Information
+View Users List
+Trigger Traditional Spider Scan
+Check Spider Scan Status until it is completed
+Generate Spider Scan full result 
+Trigger AJAX Spider Scan
+Check AJAX Spider Scan Status until it is completed
+Generate AJAX Spider Scan full result 
+Trigger Active Scan
+Check Active Scan Status until it is completed
+Generate Report
+
+
 """
 
 import argparse
